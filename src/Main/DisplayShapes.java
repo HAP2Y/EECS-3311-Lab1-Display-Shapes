@@ -6,10 +6,10 @@ import java.util.List;
 
 public class DisplayShapes {
 	private static DisplayShapes shapes; // Single DisplayShapes
-	private List<Shape> shapeDisplayList; 
+	private List<Shape> shapeDisplayList;
 
 	// Constructor
-	private DisplayShapes() {
+	public DisplayShapes() {
 	}
 
 	// Get Single DisplayShapes newly created if null
@@ -21,11 +21,11 @@ public class DisplayShapes {
 		return shapes;
 	}
 
-	public void paintComponent(Graphics g, List<Shape> list, int WD, int HD) {
-		Graphics2D g2d = (Graphics2D) g;
-		
+	public void paintComponent(Graphics graphic, List<Shape> list, int WD, int HD) {
+		Graphics2D g2d = (Graphics2D) graphic;
+
 		// Clear the GUI before displaying new Shapes from List
-		g.clearRect(50, 50, WD, HD);
+		graphic.clearRect(50, 50, WD, HD);
 
 		// Saving the list
 		shapeDisplayList = list;
