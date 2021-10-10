@@ -4,6 +4,7 @@ import java.awt.Graphics;
 
 public class Square extends Shape {
 	
+	// Constructor
 	public Square(int position) {
 		super();
 		// TODO Auto-generated constructor stub
@@ -15,6 +16,7 @@ public class Square extends Shape {
 		setArea();
 	}
 	
+	// Fill the RECT of random SIZE and desiered POSITION with random COLOR
 	@Override
 	public void drawShape(Graphics fill) {
 		// TODO Auto-generated method stub
@@ -22,19 +24,10 @@ public class Square extends Shape {
 		fill.fillRect(this.getX(), this.getY(), this.getW(), this.getH());
 	}
 
+	// area = width * height
 	@Override
 	public void setArea() {
 		// TODO Auto-generated method stub
 		this.area = this.getW() * this.getW();
 	}
-	
-//  Just for testing purpose
-//	public static void main(String[] args) {
-//		Shape test = new Square(3);
-//		System.out.println(test.getX());
-//		System.out.println(test.getW());
-//		System.out.println(test.getH());
-//		System.out.println(test.getColor());
-//		System.out.println(test.getArea());
-//	}
 }
